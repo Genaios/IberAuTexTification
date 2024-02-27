@@ -7,14 +7,14 @@ IberAuTexTification is the second version of the AuTexTification at IberLEF 2023
 For all the information about the shared task (description, how to download the dataset, constraints, etc.), please, refer to the [webpage](https://sites.google.com/view/iberautextification/home).
 
 ## Award
----
+
 To foster engagement and reward dedication, we will award the best participant in each subtask with **500€** sponsored by [Genaios](https://genaios.ai/).
 
 We hope for your participation and good luck in the competition! 🍀
 
 
 ## Subtasks
----
+
 A novelty from this edition is to detect in a **multilingual** (languages from the **Iberian peninsula** such as Spanish, English, Catalan, Gallego, Euskera, and Portuguese), **multi-domain** (news, reviews, emails, essays, dialogues, wikipedia, wikihow, tweets, emails, etc.), and **multi-model** (GPT, LLaMA, Mistral, Cohere, Anthropic, MPT, Falcon, etc.) setup, whether a text has been automatically generated or not, and, if generated, identify the model that generated the text. This means that there is only one dataset containing all the languages for each of the two subtasks, instead of different tracks as in the previous edition.
 
 The two subtasks of this edition of the shared task are:
@@ -36,7 +36,6 @@ This repo contains code to run the baselines, evaluate your predictions and chec
 The code is prepared with extensibility in mind, so you can use it as basis to develop your own models and get some functionalities for free as CLI endpoints or config handling.
 
 ## Run Baselines
----
 
 To run the baselines first you need to place the datasets of the subtasks into the folders `subtask_1` and/or `subtask_2` within the `task_datasets` folder. These datasets must be in **jsonl** format and you can include `train`, `validation`, and `test` partitions depending on your use case. We already provided dummy datasets within this repo, but you will need to place the task dataset into the folders once you download it.
 
@@ -58,7 +57,6 @@ If `--do-predict` is passed, the predictions will be stored in `evaluation_data/
 As for the baselines, you can implement your own models in [models.py](src/models.py), define their arguments in a config file and run this endpoint to perform your experimentation.
 
 ## Evaluation
----
 
 The code to compute the official evaluation scores and rank the submissions is in the [evaluate.py](src/evaluate.py) module. It computes f1 per-class and macro-averaged, accuracy, a classification report and confidence intervals of the macro-averaged f1.
 
@@ -77,7 +75,6 @@ The ranking of the submissions will be printed in the terminal and stored in `ou
 For testing purposes, we provided the prediction files of several baselines for dummy datasets of subtasks 1 and 2 in [evaluation_data/submissions/baselines](evaluation_data/submissions/baselines), along with the ground truths of these dummy datasets in [evaluation_data/ground_truth](evaluation_data/ground_truth).
 
 ## Format checking
----
 
 To ensure that your submission for a subtask has the correct format as expected by the evaluation code, you can run the `check_format` endpoint of the [CLI script](src/cli.py) as follows:
 
@@ -118,4 +115,8 @@ Participants are free to participate in any of the two subtasks.
 - Francisco Rangel (francisco.rangel@genaios.ai) - Genaios, Valencia, Spain
 - Paolo Rosso (prosso@dsic.upv.es) - Universitat Politècnica de València, Valencia, Spain
 
+# Social
 
+Google groups: [https://groups.google.com/g/iberautextification](https://groups.google.com/g/iberautextification)
+
+Slack channel: [https://join.slack.com/t/iberautextification/shared_invite/zt-2c28ezgwy-lHHM6ASHnqLY2YQ8mlPgdQ&sa=D&sntz=1&usg=AOvVaw1oYekQiDZ0_C_-N79NtReu](https://join.slack.com/t/iberautextification/shared_invite/zt-2c28ezgwy-lHHM6ASHnqLY2YQ8mlPgdQ&sa=D&sntz=1&usg=AOvVaw1oYekQiDZ0_C_-N79NtReu)
