@@ -11,9 +11,10 @@
     <img alt="Static Badge" src="https://img.shields.io/badge/Subtasks-detection%2Cattribution-yellow">
     <img alt="Static Badge" src="https://img.shields.io/badge/Award-500%E2%82%AC-green">
     <img alt="Static Badge" src="https://img.shields.io/badge/LLMs-GPT4%2CGPT3.5%2CCommand%2CJurassic%2CLLaMa2%2CMixtral-purple">
-
-
 </p>
+
+<h3 align="center"><b>Automated Text Identification on Languages of the Iberian Peninsula</b></h3>
+</br>
 
 The **Iber AuTexTification: Automated Text Identification on Languages of the Iberian Peninsula** shared task will take place as part of **IberLEF 2024**, the **6th Workshop on Iberian Languages Evaluation Forum at the SEPLN 2024 Conference**, which will be held in **Valladolid**, **Spain** on the **26th of September**, **2023**.
 
