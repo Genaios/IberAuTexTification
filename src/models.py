@@ -10,6 +10,8 @@ from abc import ABC, abstractmethod
 from collections import defaultdict
 from typing import Dict, List, Tuple
 
+import readability
+import syntok.segmenter as segmenter
 from datasets import Dataset
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LogisticRegression
@@ -53,9 +55,9 @@ class ClassificationModel(ABC):
     def predict(self, test_dataset: Dataset) -> List[str]: ...
 
 
-class LogisticRegressionBagOf(ClassificationModel):
+class LogisticRegressionBagOfNgrams(ClassificationModel):
     """
-    Logistic Regression model using bag-of-ngrams (words/chars) as features.
+    Logistic Regression model using bag-of-ngrams (words/chars) features.
     """
 
     def __init__(
@@ -162,7 +164,7 @@ class SymantoDualEncoder(ClassificationModel):
 class HuggingFaceClassifier(ClassificationModel):
     """
     HuggingFace models for sequence classification tasks
-    using either encoder o encoder-decoder models.
+    using either encoder or encoder-decoder models.
     """
 
     def __init__(
@@ -242,3 +244,52 @@ class HuggingFaceClassifier(ClassificationModel):
             self.model_params["id2label"][str(pred)] for pred in preds
         ]
         return pred_labels
+
+
+class LogisticRegressionReadability(ClassificationModel):
+    """
+    Logistic Regression model using readability features.
+    """
+
+    def __init__(
+        self,
+        model_params: Dict,
+        tokenizer_params: Dict,
+        training_params: Dict,
+        inference_params: Dict,
+    ):
+        super().__init__(
+            model_params, tokenizer_params, training_params, inference_params
+        )
+
+        self.pipeline = make_pipeline(
+            StandardScaler(with_mean=False),
+            LogisticRegression(random_state=SEED),
+        )
+
+    def _featurize(self, texts: List[str]) -> List[List[float]]:
+        features = []
+        for text in texts:
+            tokenized = "\n\n".join(
+                "\n".join(
+                    " ".join(token.value for token in sentence)
+                    for sentence in paragraph
+                )
+                for paragraph in segmenter.analyze(text)
+            )
+            # Hardcode english language
+            results = readability.getmeasures(tokenized, lang="en")
+            text_features = []
+            for metric_type in results:
+                text_features += results[metric_type].values()
+            features.append(text_features)
+        return features
+
+    def fit(self, train_dataset: Dataset) -> ClassificationModel:
+        self.pipeline.fit(
+            self._featurize(train_dataset["text"]), train_dataset["label"]
+        )
+        return self
+
+    def predict(self, test_dataset: Dataset) -> List[str]:
+        return self.pipeline.predict(self._featurize(test_dataset["text"]))

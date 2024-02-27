@@ -3,6 +3,7 @@ Module with CLI utils.
 """
 
 import json
+import os
 import random
 from pathlib import Path
 from typing import Dict, List
@@ -14,10 +15,13 @@ from datasets import Dataset, load_dataset
 
 
 def set_seed(seed: int = 13) -> None:
+    os.environ["PYTHONHASHSEED"] = str(seed)
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
 
 
 def read_json(path: Path) -> Dict:

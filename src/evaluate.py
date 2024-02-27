@@ -46,7 +46,7 @@ def evaluate_submissions(
         orient="records",
     )
 
-    for run in submissions_path.glob(f"*/{subtask}/*"):
+    for run in submissions_path.glob(f"*/{subtask}/*.jsonl"):
         team = str(run.parents[1]).split("/")[-1]
         run_name = run.stem
         run_df = pd.read_json(run, lines=True, orient="records")

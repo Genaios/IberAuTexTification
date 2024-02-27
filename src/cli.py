@@ -24,7 +24,6 @@ def run_experiment(
             help="JSON file with model configs.",
             exists=True,
             file_okay=True,
-            dir_okay=True,
             resolve_path=True,
         ),
     ],
@@ -33,7 +32,6 @@ def run_experiment(
         typer.Option(
             help="Path to the dataset folder.",
             exists=True,
-            file_okay=True,
             dir_okay=True,
             resolve_path=True,
         ),
@@ -45,8 +43,7 @@ def run_experiment(
         Path,
         typer.Option(
             help="Path to store predictions.",
-            exists=True,
-            file_okay=True,
+            exists=False,
             dir_okay=True,
             resolve_path=True,
         ),
@@ -88,7 +85,6 @@ def run_experiment(
             preds = model.predict(dataset["test"])
             output_file = (output_path / model_name).with_suffix(".jsonl")
             save_predictions(output_file, dataset["test"]["id"], preds)
-            check_submission_format(output_file, subtask)
 
 
 @app.command()
@@ -102,7 +98,6 @@ def evaluate(
         typer.Option(
             help="Path containing submissions.",
             exists=True,
-            file_okay=True,
             dir_okay=True,
             resolve_path=True,
         ),
@@ -112,7 +107,6 @@ def evaluate(
         typer.Option(
             help="Path containing ground truths.",
             exists=True,
-            file_okay=True,
             dir_okay=True,
             resolve_path=True,
         ),
@@ -121,7 +115,6 @@ def evaluate(
         Path,
         typer.Option(
             help="File name to store the ranking dataframe.",
-            file_okay=True,
             resolve_path=True,
         ),
     ] = Path("./ranking_results.tsv"),
@@ -156,6 +149,14 @@ def check_format(
             resolve_path=True,
         ),
     ],
+    test_file: Annotated[
+        Path,
+        typer.Option(
+            help="File with the test dataset.",
+            file_okay=True,
+            resolve_path=True,
+        ),
+    ],
     subtask: Annotated[
         str,
         typer.Option(help="Subtask, either `subtask_1` or `subtask_2`"),
@@ -166,9 +167,10 @@ def check_format(
 
     Args:
         submission_file (Path): submission file with the predictions.
+        test_file (Path): test dataset to compare the ids of your submission.
         subtask (str): either subtask_1 or subtask_2.
     """
-    check_submission_format(submission_file, subtask)
+    check_submission_format(submission_file, test_file, subtask)
 
 
 if __name__ == "__main__":

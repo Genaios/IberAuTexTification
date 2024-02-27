@@ -1,6 +1,6 @@
 {
     "logistic-regression-word-1_2-char-2_6": {
-        "class": "LogisticRegressionBagOf",
+        "class": "LogisticRegressionBagOfNgrams",
         "params": {
             "model_params": {},
             "tokenizer_params": {
@@ -19,6 +19,15 @@
                     "max_features": 5000
                 }
             },
+            "training_params": {},
+            "inference_params": {}
+        }
+    },
+    "logistic-regression-readability": {
+        "class": "LogisticRegressionReadability",
+        "params": {
+            "model_params": {},
+            "tokenizer_params": {},
             "training_params": {},
             "inference_params": {}
         }

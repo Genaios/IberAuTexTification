@@ -161,3 +161,4 @@ cython_debug/
 
 # Own
 symanto-requirements.txt
+checkpoints
