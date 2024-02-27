@@ -2,15 +2,16 @@
 
 <p align="center">
     <a href="LICENSE">
-        <img alt="license" src="https://img.shields.io/badge/License-CC_BY_NC_ND_4.0-green">
+        <img alt="license" src="https://img.shields.io/badge/License-CC_BY_NC_ND_4.0-red">
     </a>
     <a href="CODE_OF_CONDUCT.md">
-        <img alt="Contributor Covenant" src="https://img.shields.io/badge/Contributor%20Covenant-v2.0-green">
+        <img alt="Contributor Covenant" src="https://img.shields.io/badge/Contributor%20Covenant-v2.0-orange">
     </a>
-    <img alt="Static Badge" src="https://img.shields.io/badge/LLMs-GPT4%2CGPT3.5%2CCommand%2CJurassic%2CLLaMa2%2CMixtral-purple">
-    <img alt="Static Badge" src="https://img.shields.io/badge/Languages-en%2Ces%2Cgl%2Ceu%2Cca%2Cpt-blue">
-    <img alt="Static Badge" src="https://img.shields.io/badge/Subtasks-detection%2Cattribution-yellow">
-    <img alt="Static Badge" src="https://img.shields.io/badge/Award-500%E2%82%AC-green">
+    <img alt="Static Badge" src="https://img.shields.io/badge/LLMs-GPT4%2CGPT3.5%2CCommand%2CJurassic%2CLLaMa2%2CMixtral-yellow">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Languages-en%2Ces%2Cgl%2Ceu%2Cca%2Cpt-green">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Subtasks-detection%2Cattribution-blue">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Award-500%E2%82%AC-indigo">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Organizers-Genaios%2CUPV-violet">
     
 </p>
 
