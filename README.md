@@ -1,4 +1,4 @@
-# IberAuTexTification 👩🏻🤖
+<h1 align="center">IberAuTexTification 👩🏻🤖</h1>
 
 <p align="center">
     <a href="LICENSE">
