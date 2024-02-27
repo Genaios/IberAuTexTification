@@ -46,7 +46,7 @@ We hope for your participation and good luck in the competition! 🍀
 ## Subtasks
 
 
-A novelty from this edition is to distinguish machine generated text from human text in a **multilingual** (languages from the **Iberian peninsula** such as Spanish, English, Catalan, Gallego, Euskera, and Portuguese), **multi-domain** (news, reviews, emails, essays, dialogues, wikipedia, wikihow, tweets, emails, etc.), and **multi-model** (GPT, LLaMA, Mistral, Cohere, Anthropic, MPT, Falcon, etc.) setup, and, if generated, identify the model that generated the text. There is only one dataset containing all the languages for each subtask, instead of different language tracks per subtask as in the previous edition.
+A novelty from this edition is to distinguish machine generated text from human text in a **multilingual** (languages from the **Iberian peninsula** such as Spanish, English, Catalan, Gallego, Euskera, and Portuguese), **multi-domain** (news, reviews, emails, essays, dialogues, wikipedia, wikihow, tweets, etc.), and **multi-model** (GPT, LLaMA, Mistral, Cohere, Anthropic, MPT, Falcon, etc.) setup, and, if generated, identify the model that generated the text. There is only one dataset containing all the languages for each subtask, instead of different language tracks per subtask as in the previous edition.
 
 The two subtasks of this edition of the shared task are:
 
