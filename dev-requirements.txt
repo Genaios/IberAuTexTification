@@ -1,0 +1,12 @@
+black
+flake8
+mypy
+types-requests
+pytest
+isort
+autoflake
+pre-commit
+google-auth-stubs
+pandas-stubs
+types-openpyxl
+types-protobuf

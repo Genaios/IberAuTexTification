@@ -1,0 +1,10 @@
+pandas
+scipy
+scikit-learn
+accelerate
+typer
+readability @ git+https://github.com/andreasvc/readability.git
+syntok
+transformers
+datasets
+sentencepiece
