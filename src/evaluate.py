@@ -45,11 +45,13 @@ def evaluate_submissions(
         lines=True,
         orient="records",
     )
-
+    ground_truth_df = ground_truth_df.set_index("id")
+    
     for run in submissions_path.glob(f"*/{subtask}/*.jsonl"):
         team = str(run.parents[1]).split("/")[-1]
         run_name = run.stem
         run_df = pd.read_json(run, lines=True, orient="records")
+        run_df = run_df.set_index("id")
         if len(run_df) != len(ground_truth_df):
             print(
                 f"The number of predicted examples does not match with the reference: {team}"
