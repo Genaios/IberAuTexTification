@@ -77,14 +77,22 @@ def run_experiment(
     output_path = output_path / team_name / subtask
     output_path.mkdir(parents=True, exist_ok=True)
     for model_name, model_args in config.items():
-        model_class = getattr(models, model_args["class"])
-        model = model_class(**model_args["params"])
-        if do_train:
-            model.fit(dataset["train"])
-        if do_predict:
-            preds = model.predict(dataset["test"])
-            output_file = (output_path / model_name).with_suffix(".jsonl")
-            save_predictions(output_file, dataset["test"]["id"], preds)
+        output_file = (output_path / model_name).with_suffix(".jsonl")
+        if output_file.is_file():
+            print(output_file, "already exists. Skipping experiment.")
+            continue
+        try:
+            model_class = getattr(models, model_args["class"])
+            model = model_class(**model_args["params"])
+            if do_train:
+                model.fit(dataset["train"])
+            if do_predict:
+                preds = model.predict(dataset["test"])
+                save_predictions(output_file, dataset["test"]["id"], preds)
+        except Exception as e:
+            print(
+                "There was an error with model:", model_name, ". Exception:", e
+            )
 
 
 @app.command()
