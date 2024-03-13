@@ -277,12 +277,14 @@ class LogisticRegressionReadability(ClassificationModel):
                 )
                 for paragraph in segmenter.analyze(text)
             )
-            # Hardcode english language
-            results = readability.getmeasures(tokenized, lang="en")
-            text_features = []
-            for metric_type in results:
-                text_features += results[metric_type].values()
-            features.append(text_features)
+            # Hardcode english language and dummy if no words
+            try:
+                results = readability.getmeasures(tokenized, lang="en")
+                text_features = []
+                for metric_type in results:
+                    text_features += results[metric_type].values()
+            except:
+                text_features = [0 for _ in range(36)]
         return features
 
     def fit(self, train_dataset: Dataset) -> ClassificationModel:
