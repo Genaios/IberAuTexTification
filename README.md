@@ -29,22 +29,24 @@
 <h3 align="center"><b>Automated Text Identification on Languages of the Iberian Peninsula</b></h3>
 </br>
 
-The **Iber AuTexTification: Automated Text Identification on Languages of the Iberian Peninsula** shared task will take place as part of **IberLEF 2024**, the **6th Workshop on Iberian Languages Evaluation Forum at the SEPLN 2024 Conference**, which will be held in **Valladolid**, **Spain** on the **26th of September**, **2023**.
+The **IberAuTexTification: Automated Text Identification on Languages of the Iberian Peninsula** shared task will take place as part of **IberLEF 2024**, the **6th Workshop on Iberian Languages Evaluation Forum at the SEPLN 2024 Conference**, which will be held in **Valladolid**, **Spain** on the **26th of September**, **2024**.
 
 
 IberAuTexTification is the second version of the AuTexTification at IberLEF 2023 shared task (Sarvazyan et al., 2023). From [Genaios](https://genaios.ai/) and the [UPV](https://www.upv.es/), we extend the previous task in three dimensions: more models, more domains and more languages from the Iberian Peninsula (in a multilingual fashion), aiming to build more generalizable detectors and attributors. In this task, participants must develop models that exploit clues about linguistic form and meaning to identify automatically generated texts from a wide variety of models, domains, and languages. We plan to include LLMs like GPT-3.5, GPT-4, LLaMA, Coral, Command, Falcon, MPT, among others. New domains like essays, or dialogues, and cover the most prominent languages from the Iberian Peninsula: Spanish, Catalan, Basque, Galician, Portuguese, and English (in Gibraltar).  
 
 For all the information about the shared task (description, how to download the dataset, constraints, etc.), please, refer to the [webpage](https://sites.google.com/view/iberautextification/home).
 
-## Award
+## 🏆 Award
 
 To foster engagement and reward dedication, we will award the best participant in each subtask with **500€** sponsored by [Genaios](https://genaios.ai/).
 
 We hope for your participation and good luck in the competition! 🍀
 
+## 📢 Anouncements
 
-## Subtasks
+**The training dataset has been released!** Please, refer to the [data section of the webpage](https://sites.google.com/view/iberautextification/data) to know more about the registration, and request the [training dataset through Zenodo](https://zenodo.org/records/10853560).
 
+## 🛠️ Subtasks
 
 A novelty from this edition is to distinguish machine generated text from human text in a **multilingual** (languages from the **Iberian peninsula** such as Spanish, English, Catalan, Gallego, Euskera, and Portuguese), **multi-domain** (news, reviews, emails, essays, dialogues, wikipedia, wikihow, tweets, etc.), and **multi-model** (GPT, LLaMA, Mistral, Cohere, Anthropic, MPT, Falcon, etc.) setup, and, if generated, identify the model that generated the text. There is only one dataset containing all the languages for each subtask, instead of different language tracks per subtask as in the previous edition.
 
@@ -61,7 +63,7 @@ The first subtask is a binary classification task with two classes: 👩🏻 and
 
 The datasets will include texts from domains like essays, news, social media (tweets, forums, dialogues), wikipedia, wikihow, etc. Texts from uncontrolled domains as extracted from the OSCAR (Abadji et al., 2022) and Colossal Cleaned Multilingual Common Crawl (Raffel, 2019) will be included too.
 
-# What is this repo for?
+# 👀 What is this repo for?
 This repo contains code to run the baselines, evaluate your predictions and check the format of your submissions for both subtasks. 
 
 The code is prepared with extensibility in mind, so you can use it as basis to develop your own models and get some functionalities for free as CLI endpoints or config handling.
@@ -119,7 +121,7 @@ python -m src.cli check-format \
 If there is any issue with your submission, it will log the specific error that needs to be solved.
 Please, check that your submissions have the correct format before submitting the final predictions to the organizers.
 
-# FAQ
+# ❓ FAQ
 
 **Q: Are there any modeling constraints in this task?**
 
@@ -139,7 +141,7 @@ Yes, the constraints are the following.
 
 Participants are free to participate in any of the two subtasks.
 
-# Organizers
+# 🚀 Organizers
 
 - Areg Sarvazyan (areg.sarvazyan@genaios.ai) - Genaios, Valencia, Spain
 - José Ángel González (jose.gonzalez@genaios.ai) - Genaios, Valencia, Spain
@@ -147,7 +149,7 @@ Participants are free to participate in any of the two subtasks.
 - Francisco Rangel (francisco.rangel@genaios.ai) - Genaios, Valencia, Spain
 - Paolo Rosso (prosso@dsic.upv.es) - Universitat Politècnica de València, Valencia, Spain
 
-# Social
+# #️⃣ Social
 
 **Google groups**: [https://groups.google.com/g/iberautextification](https://groups.google.com/g/iberautextification)
 
