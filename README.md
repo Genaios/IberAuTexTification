@@ -18,7 +18,7 @@
 </p>
 
 <p align="center">
-    <a href="https://join.slack.com/t/iberautextification/shared_invite/zt-2c28ezgwy-lHHM6ASHnqLY2YQ8mlPgdQ&sa=D&sntz=1&usg=AOvVaw1oYekQiDZ0_C_-N79NtReu"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/2048px-Slack_icon_2019.svg.png" alt="Slack" style="width: 5%; height: auto;"></a>
+    <a href="https://join.slack.com/t/iberautextification/shared_invite/zt-2gd3aa8wn-cg3nx910t~mErzFXFm1ysw&sa=D&sntz=1&usg=AOvVaw2jXbnWaFAnmvWG7lAox9LN"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/2048px-Slack_icon_2019.svg.png" alt="Slack" style="width: 5%; height: auto;"></a>
     <a href="https://groups.google.com/g/iberautextification"><img src="https://fonts.gstatic.com/s/i/productlogos/groups/v9/web-48dp/logo_groups_color_1x_web_48dp.png" alt="Google Groups" style="width: 6%; height: auto;"></a>
     <a href="mailto:organizers.autextification@gmail.com"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/512px-Gmail_icon_%282020%29.svg.png?20221017173631" alt="Google Groups" style="width: 6%; height: auto;"></a>
     
@@ -153,6 +153,6 @@ Participants are free to participate in any of the two subtasks.
 
 **Google groups**: [https://groups.google.com/g/iberautextification](https://groups.google.com/g/iberautextification)
 
-**Slack channel**: [https://join.slack.com/t/iberautextification/shared_invite/zt-2c28ezgwy-lHHM6ASHnqLY2YQ8mlPgdQ&sa=D&sntz=1&usg=AOvVaw1oYekQiDZ0_C_-N79NtReu](https://join.slack.com/t/iberautextification/shared_invite/zt-2c28ezgwy-lHHM6ASHnqLY2YQ8mlPgdQ&sa=D&sntz=1&usg=AOvVaw1oYekQiDZ0_C_-N79NtReu)
+**Slack channel**: [https://join.slack.com/t/iberautextification/shared_invite/zt-2gd3aa8wn-cg3nx910t~mErzFXFm1ysw&sa=D&sntz=1&usg=AOvVaw2jXbnWaFAnmvWG7lAox9LN](https://join.slack.com/t/iberautextification/shared_invite/zt-2gd3aa8wn-cg3nx910t~mErzFXFm1ysw&sa=D&sntz=1&usg=AOvVaw2jXbnWaFAnmvWG7lAox9LN)
 
 **Organizers email**: [organizers.autextification@gmail.com](mailto:organizers.autextification@gmail.com)
