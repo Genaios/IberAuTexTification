@@ -44,6 +44,8 @@ We hope for your participation and good luck in the competition! 🍀
 
 ## 📢 Anouncements
 
+**The test dataset has been released!** Please, refer to the [data section of the webpage](https://sites.google.com/view/iberautextification/data) and request the [test dataset through Zenodo](https://zenodo.org/records/11034382).
+
 **The training dataset has been released!** Please, refer to the [data section of the webpage](https://sites.google.com/view/iberautextification/data) to know more about the registration, and request the [training dataset through Zenodo](https://zenodo.org/records/10853560).
 
 ## 🛠️ Subtasks
